@@ -44,7 +44,8 @@ if(isset($_POST['btn_upload'])) {
                         de_short_des = '".$_POST['de_short_des']."',
                         de_price = '".$_POST['de_price']."',
                         de_floor = '".$_POST['de_floor']."',
-                        de_room = '".$_POST['de_room']."',
+                        de_count = '".$_POST['de_count']."',
+                        catg_id = '".$_POST['catg_id']."',
                         de_img = '".$filename."'
                         where de_id = '".$_GET['de_id']."'";
     $update = mysqli_query($connect,$sql) or die(mysqli_error($connect));
@@ -97,12 +98,8 @@ if(isset($_POST['btn_upload'])) {
                                         <label for="">กรุณากรอกรายละเอียดห้องเเบบสั้น</label>
                                     </div>
                                     <div class="ms-3 form-floating mt-2">
-                                        <input type="number" name="de_room"  value="<?php echo $row_us['de_room'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณาระบุเลขห้อง</label>
-                                    </div>
-                                    <div class="ms-3 form-floating mt-2">
-                                        <input type="number" name="de_floor"  value="<?php echo $row_us['de_floor'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณาระบุชั้น</label>
+                                        <input type="number" name="de_count"  value="<?php echo $row_us['de_count'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
+                                        <label for="">กรุณาระบุจำนวนห้องที่ว่าง</label>
                                     </div>
                                     <div class="ms-3 form-floating mt-2">
                                         <input type="number" name="de_price"  value="<?php echo $row_us['de_price'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">

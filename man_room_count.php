@@ -20,6 +20,8 @@ if($_SESSION['level']!="admin"){
 $page ="room_count";
 $number =1;
 $search = isset($_GET['search']) ?  $_GET['search']:'';
+$de_id1 = "1";
+$de_id2 = "3";
 
 $user = "SELECT * From tb_user where name like '%$search%' or email like '%$search%'";
 $queryuser = mysqli_query($connect,$user)or die(mysqli_error($connect));
@@ -27,7 +29,50 @@ $row_u = mysqli_fetch_assoc($queryuser);
 
 $user1 = "SELECT * From tb_detail where de_name like '%$search%'";
 $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
+
+$room = "SELECT * from tb_detail where de_name = 'ห้องพักเตียงเดี่ยว'";
+$queryroom = mysqli_query($connect,$room)or die(mysqli_error($connect));
+$room_count = mysqli_fetch_assoc($queryroom);
+
+$room2 = "SELECT * from tb_detail where de_name = 'ห้องพักเตียงคู่'";
+$queryroom2 = mysqli_query($connect,$room2)or die(mysqli_error($connect));
+$room2_count = mysqli_fetch_assoc($queryroom2);
+
+$reser = "SELECT * From tb_reser";
+$queryreser = mysqli_query($connect,$reser)or die(mysqli_error($connect));
+$reser_count = mysqli_num_rows($queryreser);
+
+$conw = "SELECT * From tb_reser where r_room = 'รอการยืนยัน'";
+$queryconw = mysqli_query($connect,$conw)or die(mysqli_error($connect));
+$conw_count = mysqli_num_rows($queryconw);
+
+$conf = "SELECT * From tb_reser where r_room != 'รอการยืนยัน'";
+$queryconf = mysqli_query($connect,$conf)or die(mysqli_error($connect));
+$conf_count = mysqli_num_rows($queryconf);
+
+$bill = "SELECT * From tb_bill";
+$querybill = mysqli_query($connect,$bill)or die(mysqli_error($connect));
+$bill_count = mysqli_num_rows($querybill);
+
+
+$room_de ="SELECT * From tb_detail ORDER BY de_id ASC";
+$queryroom_de = mysqli_query($connect,$room_de)or die(mysqli_error($connect));
+
+
+$national = "SELECT level From tb_user where national = 'ไทย'";
+$querynational = mysqli_query($connect,$national)or die(mysqli_error($connect));
+$national_count = mysqli_num_rows($querynational);
+
+$national2 = "SELECT level From tb_user where national != 'ไทย'";
+$querynational2 = mysqli_query($connect,$national2)or die(mysqli_error($connect));
+$national2_count = mysqli_num_rows($querynational2);
+
+$web = "SELECT * From tb_hotel";
+$queryweb = mysqli_query($connect,$web)or die(mysqli_error($connect));
+$web_count = mysqli_fetch_assoc($queryweb);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,9 +92,14 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                 <nav class="navbar navbar-expand-lg navbar-light bg-white">
                     <button class="btn d-md-none open-btn d-block "><img src="img/list.svg" alt=""></button>
                 </nav>
-            
+                <ul class="mx-4 list-unstyled">
+                <li><a href="user.php" class="text-dark text-decoration-none">หน้าเเรก</a><a href="man_room_count.php" class="text-dark text-decoration-none"> / รายงานผลข้อมูลห้องพัก</a></li>
+            </ul>
+                <center>
+
+                <div class="mt-3 col-md-12 p-5 shadow-lg">
                 <section class="room_count p-3 mt-5">
-                    <div class="row">
+                    <div class="row ">
                     <!-- คอลัมน์ห้องพัก -->
                         <div class="col-md-6">
                             <div>
@@ -59,12 +109,12 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="container bg-white shadow p-5 rounded-3 text-center mt-2">
-                                        <h1><i class="fa-sharp fa-solid fa-door-closed"></i> <span class="fw-bold h3"><br> <span class="text-warning h2 fw-bold ">1 ห้อง</span><br> <span class="h4 fw-bold">( ห้องเตียงเดี่ยว )</span></span></h1>
+                                        <h1><i class="fa-sharp fa-solid fa-door-closed"></i> <span class="fw-bold h3"><br> <span class="text-warning h2 fw-bold "><?php echo number_format($room_count['de_count']);?> ห้อง</span><br> <span class="h4 fw-bold">( ห้องเตียงเดี่ยว )</span></span></h1>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="container bg-white shadow p-5 rounded-3 text-center mt-2">
-                                        <h1><i class="fa-sharp fa-solid fa-door-closed"></i> <span class="fw-bold h3"><br> <span class="text-warning h2 fw-bold ">1 ห้อง</span><br> <span class="h4 fw-bold">( ห้องเตียงคู่ )</span></span></h1>
+                                        <h1><i class="fa-sharp fa-solid fa-door-closed"></i> <span class="fw-bold h3"><br> <span class="text-warning h2 fw-bold "><?php echo number_format($room2_count['de_count']);?> ห้อง</span><br> <span class="h4 fw-bold">( ห้องเตียงคู่ )</span></span></h1>
                                     </div>
                                 </div>
                                 
@@ -76,11 +126,11 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="container satis-item shadow ">
-                                                <span> <i class="fa-sharp fa-solid fa-ticket h2 mt-2"></i></span>
+                                                <span><i class="fa-solid fa-users-line h2 mt-2"></i></i></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 text-center">
-                                            <p>จำนวนผู้เข้าจอง <br>ทั้งสิ้น <span class="fw-bold text-warning">1</span> คน</p>
+                                            <p>จำนวนผู้เข้าจอง <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $reser_count;?> </span> คน</p>
                                         </div>
                                     </div>
                                 </div>
@@ -88,11 +138,11 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="container satis-item shadow ">
-                                                <span> <i class="fa-sharp fa-solid fa-ticket h2 mt-2"></i></span>
+                                                <span> <i class="fa-solid fa-user-clock h2 mt-2"></i></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 text-center">
-                                            <p>จำนวนผู้เข้าจอง <br>ทั้งสิ้น <span class="fw-bold text-warning">1</span> คน</p>
+                                            <p>ลูกค้าที่รอการยืนยัน <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $conw_count;?></span> คน</p>
                                         </div>
                                     </div>
                                 </div>
@@ -100,11 +150,11 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="container satis-item shadow ">
-                                                <span> <i class="fa-sharp fa-solid fa-ticket h2 mt-2"></i></span>
+                                                <span> <i class="fa-solid fa-receipt h2 mt-2"></i></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 text-center">
-                                            <p>จำนวนผู้เข้าจอง <br>ทั้งสิ้น <span class="fw-bold text-warning">1</span> คน</p>
+                                            <p>จำนวนใบเสร็จ <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $bill_count;?></span> ใบ</p>
                                         </div>
                                     </div>
                                 </div>
@@ -112,11 +162,11 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="container satis-item shadow ">
-                                                <span> <i class="fa-sharp fa-solid fa-ticket h2 mt-2"></i></span>
+                                                <span> <i class="fa-solid fa-user-check h2 mt-2"></i></span>
                                             </div>
                                         </div>
                                         <div class="col-md-6 text-center">
-                                            <p>จำนวนผู้เข้าจอง <br>ทั้งสิ้น <span class="fw-bold text-warning">1</span> คน</p>
+                                            <p>ลูกค้าที่ยืนยันเเล้ว <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $conf_count;?></span> คน</p>
                                         </div>
                                     </div>
                                 </div>
@@ -130,26 +180,40 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
                             <div>
                                 <h3 class="fw-bold"><i class="fa-sharp fa-solid fa-wrench"></i> ปรับจำนวนห้องพัก</h3>
                             </div>
-                            <div class="col-md-6 ">
-                                <div class="container p-3">
-                                    <form action="" >
-                                        <div class="form-inline  bg-white shadow p-3 rounded-3 h4">
-                                           
-                                            <label for="" class="form-label fw-bold">1. ห้องเตียงเดี่ยว :</label>
-                                            <input type="number"  min="0" value="1" class="form-input col-md-2 text-warning fw-bold border-0 text-center"><span class="fw-bold">ห้อง</span>
-                                        </div>
-                                        <div class="form-inline  bg-white shadow p-3 rounded-3 h4">
-                                           
-                                            <label for="" class="form-label fw-bold">2. ห้องเตียงคู่ :</label>
-                                            <input type="number"  min="0" value="1" class="form-input col-md-2 text-warning fw-bold border-0 text-center"><span class="fw-bold">ห้อง</span>
-                                        </div>
-                                        <button class="btn btn-warning col-md-12 mt-3 shadow fw-bold  p-3"><h5 class="fw-bold"><i class="fa-sharp fa-solid fa-wrench"></i> ปรับจำนวนห้องพัก</h5></button>
-                                    </form>
-                                </div>
-                            </div>
+                            <div class="col-md-9 ">
+                            <?php include 'update_room_count.php'; ?>
+                            </form>
                         </div>
+                        <h4 class="ms-3 fw-bold mt-5 " style="margin-left: 4rem;">ข้อมูลเเสดงการจำเเนกประเทศลูกค้า</h4>
+                            <div class="row">
+                                <div class="mt-2 col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="container satis-item shadow ">
+                                                <span><i class="fa-solid fa-user-large h2 mt-2"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 text-center">
+                                            <p>จำนวนผู้ใช้งานชาวไทย <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $national_count;?> </span> คน</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-2 col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="container satis-item shadow ">
+                                            <span><i class="fa-solid fa-user-large h2 mt-2"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 text-center">
+                                            <p>จำนวนผู้ใช้งานชาวต่างชาติ <br>ทั้งสิ้น <span class="fw-bold text-warning"><?php echo $national2_count;?></span> คน</p>
+                                        </div>
+                                    </div>
+                                </div>
                     </div>
                 </section>
+                </div>
+                </center>
             </div>
         </div>
     </main>
@@ -181,5 +245,6 @@ $queryuser1 = mysqli_query($connect,$user1)or die(mysqli_error($connect));
             });
         }
     </script>
+        <?php include 'script.php';?>
 </body>
 </html>

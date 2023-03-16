@@ -26,6 +26,7 @@
     <ul class="list-unstyled mx-3">
         <li class=""><a href="man_member.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='member'){echo 'side_nav';}?>"><i class="fa-sharp fa-solid fa-person mt-1 me-2"></i> จัดการข้อมูลสมาชิก</a></li>
         <li class=""><a href="man_notify.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='notify'){echo 'side_nav';}?>"><i class="fa-sharp fa-solid fa-bell mt-1 me-2"></i> จัดการประชาสัมพันธ์</a></li>
+        <li class=""><a href="man_banner.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='banner'){echo 'side_nav';}?>"><i class="fa-sharp fa-solid fa-handshake mt-1 me-2"></i> จัดการผู้สนับสนุน</a></li>
         <li class=""><a href="man_catg.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='catg'){echo 'side_nav';}?>"><i class="fa-sharp fa-solid fa-table-columns mt-1 me-2"></i> จัดการประเภทห้องพัก</a></li>
         <li class=""><a href="man_room.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='room'){echo 'side_nav';}?>"><i class="fa-sharp fa-solid fa-bed mt-1 me-2"></i> จัดการข้อมูลห้องพัก</a></li>
       
