@@ -54,9 +54,10 @@ $page = 'rent';?>
 
         <section class="catg_rent bg-white p-5">
             <div class="catg-title">
-                <h2><i class="fa-sharp fa-solid fa-star me-2 text-warning"></i>ประวัติการชำระเงิน</h2>
+                <h2><i class="fa-sharp fa-solid fa-star me-2 text-warning"></i>รีวิวห้องพัก</h2>
+                
         
-                <small>ประวัติการชำระเงินของท่าน</small>
+                <small></small>
             </div>
             
       
@@ -67,55 +68,55 @@ $page = 'rent';?>
                 <a href="rent_catg.php" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-solid fa-hand-pointer menu-icon"></i> เลือกบริการ</span></a>
                 <a href="" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-sharp fa-solid fa-list menu-icon"></i> รายละเอียด</span></a>
                 <a href="" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-solid fa-square-check menu-icon"></i> ยืนยันการจอง</span></a>
-                <a href="my_payment.php" class="text-decoration-none menu-item "><span class="bg-warning  shadow-sm text-white pe-4 ps-4 h4 rounded-3 "><i class="fa-sharp fa-solid fa-clock-rotate-left menu-icon"></i> การชำระเงิน</span></a>
+                <a href="my_payment.php" class="text-decoration-none menu-item "><span class="rent-btn shadow-sm  pe-4 ps-4 h4 rounded-3 "><i class="fa-sharp fa-solid fa-clock-rotate-left menu-icon"></i> การชำระเงิน</span></a>
                 <a href="my_room.php" class="text-decoration-none menu-item b-badege"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-sharp fa-solid fa-person-shelter menu-icon"></i> ห้องของฉัน
                 <?php if($count > 0){ ?>
                     <span class="badge bg-danger rounded-circle shadow-sm"><?php echo $count;?></span>
               <?php  } ?></span></a>
-                <a href="review_us.php" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-solid fa-star"></i>  รีวิวห้องพัก</span></a>
-               
+                <a href="" class="text-decoration-none menu-item"><span class="bg-warning  shadow-sm text-white pe-4 ps-4 h4 rounded-3 "><i class="fa-solid fa-star"></i>  รีวิวห้องพัก</span></a>
+             
             </div>
-            <div class="search container mt-3">
-                  <i class="ms-2 fa fa-search"></i>
-                 <form method="POST">
-                    <input type="text" class="form-control" name="search" placeholder="ค้นหารายการที่ท่านชำระเงิน">
-                    <button class="btn btn-warning">ค้นหา</button>
-                 </form>
-                 </div>
         </section>
         <section class="rent_show">
           <div class="container">
-            <table class="table table-hover bg-white text-center">
-                <tr><h3>รายการที่ท่านได้ชำระเงินแล้ว</h3></tr><hr>
-                <tr>
-                    <td>ลำดับที่</td>
-                    <td>ห้องที่</td>
-                    <td>ชำระเมื่อ</td>
-                    <td>ช่องทางการจอง</td>
-                    <td>สถานะการจอง</td>
-                    <td>ดูรายละเอียด</td>
-                </tr>
-                <?php while ($row_pay = mysqli_fetch_assoc($pay_show_query)) { ?>
-                <tr>
-                  
-                     <td><?php echo $number;?></td>
-                     <td><?php echo $row_pay['r_room'];?></td>
-                     <td><?php echo $row_pay['bill_date'];?></td>
-                     <td><?php echo $row_pay['bill_chanel'];?></td>
-                     <td><?php echo $row_pay['bill_status'];?></td>
-              
-                     <td><a href="rent_payment.php?bill_id=<?php echo $row_pay['bill_id'];?>" class="btn btn-warning text-white">ชมรายละเอียด</a></td>
+         
+                <div class="row">
+               <div class="col-md-6 mt-3">
+                    <h3 class="text-warning">แต้มรีวิว <?php echo $row_u['u_review'];?> แต้ม</h3>
+               </div>
+               <div class="col-md-6"></div>
+               </div>
+               <hr>
                
-                </tr>
-                <?php $number++;} ?>
-            </table>
-                <?php if($pay_count == null){ ?>
-                                    <div class="container text-secondary text-center p-4 mb-1">
-                                    <h1>ไม่พบรายการที่ท่านชำระเงิน</h1>
-                                    <br><br><br><br><br>
-                                    </div>
-                <?php } ?>   
-            </div>            
+               <form >
+                <textarea name="" required id="" cols="30" placeholder="กรุณากรอกข้อความการรีวิวของท่าน" rows="5" class="form-control mb-3"></textarea>
+                <p>คะแนนรีวิว</p>
+                <div class="form-check form-check-inline ">
+                    <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1 คะแนน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2 คะแนน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">3 คะแนน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">4 คะแนน</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">5 คะแนน</label>
+                    </div>
+                    <br>
+                    <button class="btn btn-warning p-2 mt-2">ส่งคะแนนรีวิว</button>
+               </form>
+                <br><br>
+            </div>    
+
         </section>
    
 

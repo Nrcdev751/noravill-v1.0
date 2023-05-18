@@ -11,7 +11,7 @@ $row_w = mysqli_fetch_assoc($web_query);
 
 
 $hero_t = "font-size: 85px;";
-$hero_st = "font-size: 22px;";
+$hero_st = "font-size: 30px;";
 $icon_t = "font-size: 32px;";
 $slide_t = "font-size: 20px;";
 $rad25 = "border-radius: 25px ;";

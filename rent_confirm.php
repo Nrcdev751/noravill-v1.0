@@ -89,7 +89,7 @@ if($row_rent['r_status']=='ชำระเงินแล้ว'){
                 <?php if($count > 0){ ?>
                     <span class="badge bg-danger rounded-circle shadow-sm menu-icon"><?php echo $count;?></span>
               <?php  } ?></span></a>
-                <a href="" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-solid fa-star menu-icon"></i>  รีวิวห้องพัก</span></a>  
+                <a href="review_us.php" class="text-decoration-none menu-item"><span class="rent-btn shadow-sm pe-4 ps-4 h4 rounded-3"><i class="fa-solid fa-star menu-icon"></i>  รีวิวห้องพัก</span></a>  
             </div>
             
         </section>
