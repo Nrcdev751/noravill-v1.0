@@ -6,21 +6,21 @@
             <div class="col-md-3">
                 <div class="container">
                     <div class="item-box bg-warning shadow" >
-                        <i class="fa-sharp fa-solid fa-mug-hot "></i>
+                        <i class="fa-solid fa-car "></i>
                       
                     </div>
-                    <h3 class="text-center mt-2 fw-bold">เทส</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h3 class="text-center mt-2 fw-bold">รถ</h3>
+                    <p class="text-center">มีบริการพื้นที่จอดรถ</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="container">
                     <div class="item-box bg-warning shadow" >
-                    <i class="fa-sharp fa-solid fa-broom"></i>
+                    <i class="fa-sharp fa-solid fa-mug-hot"></i>
                       
                     </div>
-                    <h3 class="text-center mt-2 fw-bold">เทส</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h3 class="text-center mt-2 fw-bold">คาเฟ่</h3>
+                    <p class="text-center">มีบริการคาเฟ่ภายใน</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -29,8 +29,8 @@
                     <i class="fa-sharp fa-solid fa-wifi"></i>
                       
                     </div>
-                    <h3 class="text-center mt-2 fw-bold">เทส</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h3 class="text-center mt-2 fw-bold">Wifi</h3>
+                    <p class="text-center">รองรับเครือข่ายไร้สาย</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -39,8 +39,8 @@
                     <i class="fa-sharp fa-solid fa-bell-concierge"></i>
                       
                     </div>
-                    <h3 class="text-center mt-2 fw-bold">เทส</h3>
-                    <p class="text-center">Lorem ipsum dolor sit amet consectetur.</p>
+                    <h3 class="text-center mt-2 fw-bold">อาหารเช้า</h3>
+                    <p class="text-center">มีบริการอาหารเช้า</p>
                 </div>
             </div>
        

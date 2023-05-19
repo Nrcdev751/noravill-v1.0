@@ -28,7 +28,7 @@ $count = mysqli_num_rows($count_query);
 
 $number = 1;
 
-$page = 'rent';?>
+$page = 'product';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,7 +54,7 @@ $page = 'rent';?>
 
         <section class="catg_rent bg-white p-5">
             <div class="catg-title">
-                <h2><i class="fa-sharp fa-solid fa-star me-2 text-warning"></i>สินค้าของเรา</h2>
+                <h2><i class="fa-sharp fa-solid fa-star me-2 text-warning"></i>สินค้าของเรา</h2><span class="text-secondary">อยู่ในระหว่างพัฒนา</span>
             </div>
             
       
@@ -74,7 +74,7 @@ $page = 'rent';?>
                             <span>ชานมสตรอเบอร์รี่</span>
                         </div>
                         <div class="pro-price ">
-                        <span class="text-warning fw-bold">12 บาท</span>
+                        <span class="text-warning fw-bold">45 บาท</span>
                         </div>
                    </div>
                    </div>
@@ -88,7 +88,7 @@ $page = 'rent';?>
                             <span>ชานมสตรอเบอร์รี่</span>
                         </div>
                         <div class="pro-price ">
-                        <span class="text-warning fw-bold">12 บาท</span>
+                        <span class="text-warning fw-bold">45 บาท</span>
                         </div>
                    </div>
                    </div>
@@ -102,7 +102,7 @@ $page = 'rent';?>
                             <span>ชานมสตรอเบอร์รี่</span>
                         </div>
                         <div class="pro-price ">
-                        <span class="text-warning fw-bold">12 บาท</span>
+                        <span class="text-warning fw-bold">45 บาท</span>
                         </div>
                    </div>
                    </div>
@@ -116,7 +116,7 @@ $page = 'rent';?>
                             <span>ชานมสตรอเบอร์รี่</span>
                         </div>
                         <div class="pro-price ">
-                        <span class="text-warning fw-bold">12 บาท</span>
+                        <span class="text-warning fw-bold">45 บาท</span>
                         </div>
                    </div>
                    </div>
@@ -128,7 +128,7 @@ $page = 'rent';?>
    
 
 
-
+        <br><br><br><br><br><br>
 
     <?php include 'footer.php';?>
   

@@ -7,6 +7,10 @@
          where bill_status = 'ชำระเงินแล้ว' AND r_room = 'รอการยืนยัน'";
     $count_room_query = mysqli_query($connect,$count_room);
     $count_room = mysqli_num_rows($count_room_query);
+
+    $count_review = "SELECT * From review where re_status = 'new'";
+    $count_review_query = mysqli_query($connect,$count_review);
+    $count_reviews = mysqli_num_rows($count_review_query);
 ?>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -40,6 +44,11 @@
             <span class="bg-danger text-white side_inner ps-2 pe-2 d-flex "><?php echo $count_room;?></span>
        <?php } ?>
        <i class="fa-sharp fa-solid fa-door-closed mt-1 me-2"></i> ยืนยันหมายเลขห้องพัก </a></li>
+        <li class="side_con"><a href="man_room_review.php" class="text-decoration-none d-flex a_w px-2 py-2 <?php if($page=='room_review'){echo 'side_nav';}?>">
+        <?php if($count_reviews > 0){ ?>
+            <span class="bg-danger text-white side_inner ps-2 pe-2 d-flex "><?php echo $count_reviews;?></span>
+       <?php } ?>
+       <i class="fa-sharp fa-solid fa-star mt-1 me-2"></i> การรีวิวห้องพัก </a></li>
     </ul>
     <hr>
     <ul class="list-unstyled mx-3">

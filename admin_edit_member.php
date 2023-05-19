@@ -43,6 +43,7 @@ if(isset($_POST['btn_upload'])) {
                         age = '".$_POST['age']."',
                         gender = '".$_POST['gender']."',
                         des = '".$_POST['des']."',
+                        password = '".$_POST['password']."',
                         u_pic = '".$filename."'
                         where u_id = '".$_GET['u_id']."'";
     $update = mysqli_query($connect,$sql) or die(mysqli_error($connect));
@@ -93,16 +94,15 @@ if(isset($_POST['btn_upload'])) {
                         </div>
                         <div class=" col-md-5 p-5 shadow-lg">
                             <h1 class="fw-bold">ข้อมูลส่วนตัว</h1>
-                            <small>รายละเอียดส่วนตัว</small>
-                                <hr class="col-md-6">
+                      
                           
                             <form  method="POST" class="form-contact" enctype="multipart/form-data">
-                            <div>
+                            <!-- <div>
                                     <label for="">อัพโหลดรูปของท่าน</label>
                                     <input type="file" name="file_img"   placeholder="ไทย" class="form-control">
-                                </div>
-                                <br>
-                            <small class="text-secondary">เลือกคำนำหน้าของท่าน</small>
+                                </div> -->
+                           
+                            <!-- <small class="text-secondary">เลือกคำนำหน้าของท่าน</small>
                             <br>
                                 <div class="form-check-inline" >
                                     <input type="radio" name="title" required style="<?php echo $radi_yellow;?>" value="นาย" class="form-check-input">
@@ -111,8 +111,28 @@ if(isset($_POST['btn_upload'])) {
                                     <label for="" class="form-check-label">นาง</label>
                                     <input type="radio" name="title"style="<?php echo $radi_yellow;?>" value="นางสาว" class="form-check-input">
                                     <label for="" class="form-check-label">นางสาว</label>
+                                </div> -->
+                                
+                                <div>
+                                    <label for="">ตำเเหน่ง</label>
+                                 
+                                    <select name="level" class="form-control" id="">
+                                        <option value="user">ผู้ใช้ทั่วไป</option>
+                                        <option value="admin">แอดมิน</option>
+                                    </select>
                                 </div>
-                        
+                                <div>
+                                    <label for="">แต้มรีวิว</label>
+                                    <input type="number" name="u_review"   placeholder="0849713544" value="<?php echo $row_us['u_review'];?>" class="form-control mb-2">
+                                    
+                                </div>
+                                <div>
+                                    <label for="">รหัสผ่าน</label>
+                                    <input type="text" name="password"  placeholder="example@gmail.com" value="<?php echo $row_us['password'];?>" class="form-control">
+                                  
+                              </div>
+                                <small>รายละเอียดส่วนตัว</small>
+                                <hr class="col-md-6">
                                 <div class="row">
                                         <div class="col-md-6">
                                             <div class=" mt-3">
@@ -136,29 +156,26 @@ if(isset($_POST['btn_upload'])) {
                                     <input type="text" name="line_id" placeholder="example123123" value="<?php echo $row_us['line_id'];?>"   class="form-control">
                                </div>
                               <div>
-                                    <label for="">กรุณากรอกอีเมลล์ของท่าน</label>
+                                    <label for="">อีเมลล์</label>
                                     <input type="email" name="email"  placeholder="example@gmail.com" value="<?php echo $row_us['email'];?>" class="form-control">
                                   
                               </div>
                                 <div>
-                                    <label for="">กรุณากรอกเบอร์โทรศัพท์ของท่าน</label>
+                                    <label for="">เบอร์โทรศัพท์</label>
                                     <input type="number" name="tel"   placeholder="0849713544" value="<?php echo $row_us['tel'];?>" class="form-control mb-2">
                                     
                                 </div>
                                 <small>รายละเอียดอื่น ๆ</small>
                                 <hr class="col-md-6">
                                 <div>
-                                    <label for="">กรุณากรอกสัญชาติของท่าน</label>
+                                    <label for="">สัญชาติ</label>
                                     <input type="text" name="national"   placeholder="ไทย" value="<?php echo $row_us['national'];?>" class="form-control">
                                 </div>
                                 <div>
-                                    <label for="">กรุณากรอกประเทศของท่าน</label>
+                                    <label for="">ประเทศ</label>
                                     <input type="text" name="country" placeholder="ไทย" value="<?php echo $row_us['country'];?>" class="form-control">
                                 </div>
-                                <div>
-                                    <label for="">ตำเเหน่ง</label>
-                                    <input type="text" name="level"   placeholder="user" value="<?php echo $row_us['level'];?>" class="form-control">
-                                </div>
+                               
                                <button name="btn_submit" type="submit" class="btn btn-warning col-md-12 mt-3 shadow-sm text-white fw-bold">แก้ไขข้อมูลส่วนตัว</button>
                             </form>
                         </div>

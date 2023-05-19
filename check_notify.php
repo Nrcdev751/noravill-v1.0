@@ -9,6 +9,7 @@
 
         $n_quest = $_POST['n_quest'];
         $n_detail = $_POST['n_detail'];
+        $n_link = $_POST['n_link'];
         $n_date = date("Y-m-d H:i");
         
         $check = "SELECT n_quest From notify where n_quest = '$n_quest'";
@@ -20,8 +21,8 @@
             echo "window.history.back();";
             echo "</script>";
         }else{
-            $user = "INSERT INTO notify (n_quest,n_detail,n_img,n_date)
-                    values ('$n_quest','$n_detail','$filename','$n_date')";
+            $user = "INSERT INTO notify (n_quest,n_detail,n_img,n_date,n_link)
+                    values ('$n_quest','$n_detail','$filename','$n_date','$n_link')";
             $sql = mysqli_query($connect,$user) or die(mysqli_error($connect));
             echo "<script type = 'text/javascript'>";
             echo "alert('เพิ่มประชาสัมพันธ์เสร็จสิ้น');";

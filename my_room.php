@@ -119,6 +119,7 @@ $page = 'rent';?>
                 </tr>
                 <?php $number++;} ?>
             </table>
+            <br><br><br><br><br>
                 <?php if($pay_count == null){ ?>
                                     <div class="container text-secondary text-center p-4 mb-1">
                                     <h1>ไม่พบรายการที่ท่านจอง</h1>

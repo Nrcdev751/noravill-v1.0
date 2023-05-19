@@ -10,31 +10,26 @@
                             <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-12 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-12 text-white">248 ถนนราเมศวร์ ตำบลคูห่สวรรค์ อำเภอเมือง จังหวัดพัทลุง เทศบาลเมืองพัทลุง 93000</div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3 ">
                             <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
+                            <i class="fa-solid fa-mobile-screen-button text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-12 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-9 text-white">096 246 9986</div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3 ">
                             <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
+                            <i class="fa-solid fa-paper-plane text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-12 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-9 text-white"><a class="text-decoration-none text-white" href="https://web.facebook.com/noravill.ptl/">https://web.facebook.com/noravill.ptl/</a> </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
-                            <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-12 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d988.6519044941722!2d100.08043661474967!3d7.617602817112479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d7cd34468024f%3A0xf40e830b554469f2!2z4LmC4Lij4LiH4LmB4Lij4Lih4LmC4LiZ4Lij4Liy4Lin4Li04Lil4Lil4LmMIOC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC5gOC4l-C4hOC4meC4tOC4hOC4nuC4seC4l-C4peC4uOC4hw!5e0!3m2!1sth!2sus!4v1684496581753!5m2!1sth!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
        <div class="row">
@@ -50,31 +45,26 @@
                             <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-9 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-9 text-white">248 ถนนราเมศวร์ ตำบลคูห่สวรรค์ อำเภอเมือง จังหวัดพัทลุง เทศบาลเมืองพัทลุง 93000</div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3 ">
                             <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
+                            <i class="fa-solid fa-mobile-screen-button text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-9 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-9 text-white">096 246 9986</div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
+                        <div class="col-md-3 ">
                             <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
+                            <i class="fa-solid fa-paper-plane text-white float-center" style="<?php echo $icon_t;?>"></i>
                             </div>
                         </div>
-                        <div class="col-md-9 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="col-md-9 text-white"><a class="text-decoration-none text-white" href="https://web.facebook.com/noravill.ptl/">https://web.facebook.com/noravill.ptl/</a> </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-3 mt-2">
-                            <div class="container">
-                            <i class="fa-sharp fa-solid fa-location-dot text-white float-center" style="<?php echo $icon_t;?>"></i>
-                            </div>
-                        </div>
-                        <div class="col-md-9 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d988.6519044941722!2d100.08043661474967!3d7.617602817112479!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d7cd34468024f%3A0xf40e830b554469f2!2z4LmC4Lij4LiH4LmB4Lij4Lih4LmC4LiZ4Lij4Liy4Lin4Li04Lil4Lil4LmMIOC4p-C4tOC4l-C4ouC4suC4peC4seC4ouC5gOC4l-C4hOC4meC4tOC4hOC4nuC4seC4l-C4peC4uOC4hw!5e0!3m2!1sth!2sus!4v1684496581753!5m2!1sth!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -84,7 +74,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-8">
                     <h3 class="fw-bold"><i class="fa-sharp fa-solid fa-headset me-2"></i>ติดต่อเรา</h3>
-                        <span class="text-secondary">Lorem, ipsum dolor.</span>
+                        <span class="text-secondary">ส่งข้อความถึงทางโรงแรมโดยตรง</span>
                         <form action="line-notify.php" method="POST" class="form-contact">
                             <div class="form-floating mt-2 ">
                                 <input type="text" name="name" placeholder="name" required class="form-control ">

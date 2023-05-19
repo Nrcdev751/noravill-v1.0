@@ -9,7 +9,7 @@
                                 <div class="card-fly shadow p-3">
                                     
                                     <span class="card-title h5">ห้องเตียงเดี่ยว</span><span class="bg-warning float-end fw-bold text-dark p-2 rounded-3 col-md-5 price-fly">700.-/ คืน</span>
-                                            <br><small class=" text-secondary">เขียนว่าอะไรดีครับ</small>
+                                            <br><small class=" text-secondary">ห้องพัก</small>
                                         <div class="row mt-2">
                                             <div class="col-md-6"><i class="fa-sharp fa-solid fa-door-closed"></i><span class="fw-bold ms-2">ห้อง 303</span></div>
                                             <div class="col-md-6 mb-2">
@@ -38,7 +38,7 @@
                                 <div class="card-fly shadow p-3">
                                     
                                     <span class="card-title h5">ห้องเตียงคู่</span><span class="bg-warning float-end fw-bold text-dark p-2 rounded-3 col-md-5 price-fly">700.-/ คืน</span>
-                                            <br><small class=" text-secondary">เขียนว่าอะไรดีครับ</small>
+                                            <br><small class=" text-secondary">ห้องพัก</small>
                                         <div class="row mt-2">
                                             <div class="col-md-6"><i class="fa-sharp fa-solid fa-door-closed"></i><span class="fw-bold ms-2">ห้อง 201</span></div>
                                             <div class="col-md-6 mb-2">
@@ -67,7 +67,7 @@
                                 <div class="card-fly shadow p-3">
                                     
                                     <span class="card-title h5">ห้องเตียงเดี่ยว</span><span class="bg-warning float-end fw-bold text-dark p-2 rounded-3 col-md-5 price-fly">700.-/ คืน</span>
-                                            <br><small class=" text-secondary">เขียนว่าอะไรดีครับ</small>
+                                            <br><small class=" text-secondary">ห้องพัก</small>
                                         <div class="row mt-2">
                                             <div class="col-md-6"><i class="fa-sharp fa-solid fa-door-closed"></i><span class="fw-bold ms-2">ห้อง 301</span></div>
                                             <div class="col-md-6 mb-2">
@@ -96,7 +96,7 @@
                                 <div class="card-fly shadow p-3">
                                     
                                     <span class="card-title h5">ห้องเตียงเดี่ยว</span><span class="bg-warning float-end fw-bold text-dark p-2 rounded-3 col-md-5 price-fly">700.-/ คืน</span>
-                                            <br><small class=" text-secondary">เขียนว่าอะไรดีครับ</small>
+                                            <br><small class=" text-secondary">ห้องพัก</small>
                                         <div class="row mt-2">
                                             <div class="col-md-6"><i class="fa-sharp fa-solid fa-door-closed"></i><span class="fw-bold ms-2">ห้อง 104</span></div>
                                             <div class="col-md-6 mb-2">

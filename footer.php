@@ -6,20 +6,20 @@
     </div>
     <div class="col-md-3 mt-4">
         <h3 class="fw-bold">ติดต่อ</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, sint?</p>
+        <p><?php echo $row_w['h_tel'];?></p>
         <hr>
     </div>
     <div class="col-md-3 mt-4">
-        <h3 class="fw-bold">รายละเอียด</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, sint?</p>
+        <h3 class="fw-bold">ที่อยู่</h3>
+        <p><?php echo $row_w['h_address'];?></p>
         <hr>
     </div>
     <div class="col-md-3 mt-4">
         <h3 class="fw-bold">เกี่ยวกับ</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, sint?</p>
+        <p><?php echo $row_w['h_des'];?></p>
         <hr>
     </div>
 
     </div>
-  </div>
+</div>
 </section>

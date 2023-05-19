@@ -39,7 +39,7 @@ $catg1 = "SELECT * From category where catg_name like '%$search%'";
 $querycatg1 = mysqli_query($connect,$catg1)or die(mysqli_error($connect));
 $catg_count = mysqli_num_rows($querycatg1);
 
-$review1 = "SELECT * From review where re_name like '%$search%'";
+$review1 = "SELECT * From review ";
 $queryreview1 = mysqli_query($connect,$review1)or die(mysqli_error($connect));
 $re_count = mysqli_num_rows($queryreview1);
 

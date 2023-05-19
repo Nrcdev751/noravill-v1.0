@@ -39,6 +39,7 @@ if(isset($_POST['btn_upload'])) {
 
     $sql = "UPDATE notify set n_quest = '".$_POST['n_quest']."',
                         n_detail = '".$_POST['n_detail']."',
+                        n_link = '".$_POST['n_link']."',
                         n_img = '".$filename."'
                         where n_id = '".$_GET['n_id']."'";
     $update = mysqli_query($connect,$sql) or die(mysqli_error($connect));
@@ -82,12 +83,17 @@ if(isset($_POST['btn_upload'])) {
                                         <input type="text" name="n_quest" value="<?php echo $row_us['n_quest'];?>" placeholder="name" required class="form-control" style="<?php echo $rad30;?>">
                                         <label for="">กรุณากรอกชื่อประชาสัมพันธ์</label>
                                     </div>
+                              
+                                        <textarea name="n_detail" class="form-control ms-3 mt-2"  placeholder="คำอธิบายการประชาสัมพันธ์"   cols="20" rows="5"><?php echo $row_us['n_detail'];?></textarea>
+                                     
+                                      
+                               
                                     <div class="ms-3 form-floating mt-2">
-                                        <input type="text" name="n_detail"  value="<?php echo $row_us['n_detail'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณากรอกรายละเอียดห้อง</label>
+                                        <input type="text" name="n_link"  value="<?php echo $row_us['n_link'];?>" placeholder="email" class="form-control" style="<?php echo $rad30;?>">
+                                        <label for="">ลิงค์ประกอบการอธิบาย</label>
                                     </div>
-                                    <input type="file" name="file_img" class="ms-3 form-control mt-2"  style="<?php echo $rad30;?>">
-                                    <label for="" class="ms-4"><small>กรุณาใส่รูปภาพของท่าน</small></label>
+                                    <!-- <input type="file" name="file_img" class="ms-3 form-control mt-2"  style="<?php echo $rad30;?>">
+                                    <label for="" class="ms-4"><small>กรุณาใส่รูปภาพของท่าน</small></label> -->
                                     <br>
                                     <div class="row p-3">
                                     <button name="btn_upload" class="btn btn-white board__hover col-md-12 text-white" style="<?php echo $yellow_bg;?>">แก้ไขข้อมูลประชาสัมพันธ์</button>

@@ -11,11 +11,7 @@ if(!$_SESSION['u_id']){
 
 $search = isset($_POST['search']) ?  $_POST['search']:'';
 
-$pay_show = "SELECT tb_bill.*,tb_reser.* From tb_bill
-        INNER JOIN tb_reser on tb_reser.r_id = tb_bill.r_id
-        where tb_bill.u_id = '".$_SESSION['u_id']."' order by bill_date desc";
-$pay_show_query = mysqli_query($connect,$pay_show) or die(mysqli_error($connect));
-$pay_count = mysqli_num_rows($pay_show_query);
+
 
 $user = "SELECT * From tb_user where u_id = '".$_SESSION['u_id']."'";
 $user_query = mysqli_query($connect,$user) or die(mysqli_error($connect));
@@ -25,6 +21,7 @@ $row_u = mysqli_fetch_assoc($user_query);
 $count_unpay = "SELECT r_status From tb_reser where u_id = '".$_SESSION['u_id']."' AND r_status = 'รอการชำระเงิน'";
 $count_query = mysqli_query($connect,$count_unpay);
 $count = mysqli_num_rows($count_query); 
+
 
 $number = 1;
 
@@ -88,43 +85,52 @@ $page = 'rent';?>
                </div>
                <hr>
                
-               <form >
-                <textarea name="" required id="" cols="30" placeholder="กรุณากรอกข้อความการรีวิวของท่าน" rows="5" class="form-control mb-3"></textarea>
-                <p>คะแนนรีวิว</p>
-                <div class="form-check form-check-inline ">
-                    <input class="form-check-input" required type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">1 คะแนน</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">2 คะแนน</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">3 คะแนน</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">4 คะแนน</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">5 คะแนน</label>
-                    </div>
-                    <br>
-                    <button class="btn btn-warning p-2 mt-2">ส่งคะแนนรีวิว</button>
-               </form>
+             <?php if($row_u['u_review'] > 0){ ?>
+                  <form method="POST">
+                  <input type="hidden" name="u_review" value="<?php echo $row_u['u_review'];?>">
+                  <textarea name="re_des" required  cols="30" placeholder="กรุณากรอกข้อความการรีวิวของท่าน" rows="5" class="form-control mb-3"></textarea>
+                  <p>คะแนนรีวิว</p>
+                  <div class="form-check form-check-inline ">
+                      <input class="form-check-input" required type="radio" name="re_score" id="inlineRadio1" value="1">
+                      <label class="form-check-label" for="inlineRadio1">1 คะแนน</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="re_score" id="inlineRadio2" value="2">
+                      <label class="form-check-label" for="inlineRadio2">2 คะแนน</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="re_score" id="inlineRadio2" value="3">
+                      <label class="form-check-label" for="inlineRadio2">3 คะแนน</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="re_score" id="inlineRadio2" value="4">
+                      <label class="form-check-label" for="inlineRadio2">4 คะแนน</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="re_score" id="inlineRadio2" value="5">
+                      <label class="form-check-label" for="inlineRadio2">5 คะแนน</label>
+                      </div>
+                      <button name="btn_review" class="btn btn-warning p-2 mt-2">ส่งคะแนนรีวิว</button>
+                 </form>
+            <?php }else{ ?>
+                <h1 class="text-secondary">แต้มรีวิวของท่านยังมีไม่พอ</h1>
+                <br><br>    <br><br>    <br><br>    <br><br>
+           <?php  } ?>
                 <br><br>
+                <br>
             </div>    
 
         </section>
    
-
+    
 
 
 
     <?php include 'footer.php';?>
-  
+    <?php include 'script.php';?>
+    <?php include 'check_review.php';?>
+   
 </body>
-<?php include 'script.php';?>
+
+
 </html>

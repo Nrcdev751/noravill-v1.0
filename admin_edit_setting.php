@@ -41,7 +41,6 @@ if(isset($_POST['btn_upload'])) {
     $sql = "UPDATE tb_hotel set h_name = '".$_POST['h_name']."',
                         h_email = '".$_POST['h_email']."',
                         h_tel = '".$_POST['h_tel']."',
-                        h_marquee = '".$_POST['h_marquee']."',
                         h_des = '".$_POST['h_des']."',
                         h_address = '".$_POST['h_address']."',
                         h_logo = '".$filename."'
@@ -91,19 +90,16 @@ if(isset($_POST['btn_upload'])) {
                                     </div>
                                     <div class="ms-3 form-floating mt-2">
                                         <input type="text" name="h_des"  value="<?php echo $row_us['h_des'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณากรอกรายละเอียด</label>
+                                        <label for="">กรุณากรอกข้อมูลเกี่ยวกับโรงแรม</label>
                                     </div>
-                                    <div class="ms-3 form-floating mt-2">
-                                        <input type="text" name="h_marquee"  value="<?php echo $row_us['h_marquee'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณากรอกตัวอักษรเคลื่อนไหว</label>
-                                    </div>
+                         
                                     <div class="ms-3 form-floating mt-2">
                                         <input type="email" name="h_email"  value="<?php echo $row_us['h_email'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
                                         <label for="">กรุณากรอกอีเมลล์ของท่าน</label>
                                     </div>
                                     <div class="ms-3 form-floating mt-2">
                                         <input type="text" name="h_address"  value="<?php echo $row_us['h_address'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">
-                                        <label for="">กรุณากรอกที่อยู่ของท่าน</label>
+                                        <label for="">กรุณากรอกรายละเอียด</label>
                                     </div>
                                     <div class="ms-3 form-floating mt-2">
                                         <input type="text" max="10" name="h_tel"  value="<?php echo $row_us['h_tel'];?>" placeholder="email" required class="form-control" style="<?php echo $rad30;?>">

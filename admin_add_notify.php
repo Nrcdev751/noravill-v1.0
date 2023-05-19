@@ -64,9 +64,14 @@ $querycatg = mysqli_query($connect,$catg)or die(mysqli_error($connect));
                                         <label for="">กรุณากรอกชื่อประชาสัมพันธ์</label>
                                     </div>
                                     <textarea name="n_detail" cols="30" rows="4" placeholder="กรุณากรอกอธิบาย"  style="<?php echo $rad30;?>" class="ms-3 form-control mt-3"></textarea>
+                                    <div class="ms-3 form-floating mt-2">
+                                        <input type="text" name="n_link"  placeholder="email" class="form-control" style="<?php echo $rad30;?>">
+                                        <label for="">ลิงค์ประกอบการอธิบาย</label>
+                                    </div>
                                     <input type="file" name="file_img" class="ms-3 form-control mt-2"  style="<?php echo $rad30;?>">
                                     <label for="" class="ms-4"><small>กรุณาใส่รูปภาพของท่าน</small></label>
                                     <br>
+                                    
                                     <div class="row p-3">
                                         <button name="btn_upload" class="btn btn-white board__hover  text-white col-md-12" style="<?php echo $yellow_bg;?>">เพิ่มประชาสัมพันธ์</button>
                                     </div>

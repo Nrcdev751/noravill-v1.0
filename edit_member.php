@@ -14,10 +14,9 @@ if(isset($_POST['btn_submit'])) {
     tel = '".$_POST['tel']."',
     national = '".$_POST['national']."',
     country = '".$_POST['country']."',
+    u_review = '".$_POST['u_review']."',
     line_id = '".$_POST['line_id']."',
-    title = '".$_POST['title']."',
-    level = '".$_POST['level']."',
-    u_pic = '$filename' 
+    level = '".$_POST['level']."'
     where u_id = '".$_GET['u_id']."'";
     $query = mysqli_query($connect,$sql) or die(mysqli_error($connect));
     echo 

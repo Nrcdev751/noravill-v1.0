@@ -8,7 +8,7 @@
                 <ul class="navlinks">
                     <li><a href="user.php" <?php if($page=='index'){echo 'class="text-warning"';}?>><i class="fa-sharp fa-solid fa-house "></i> หน้าแรก</a></li>
                     <li><a href="rent_catg.php" <?php if($page=='rent'){echo 'class="text-warning"';}?>><i class="fa-sharp fa-solid fa-book"></i> ระบบการจอง</a></li>
-                    <li><a href="product.php"><i class="fa-sharp fa-solid fa-bag-shopping"></i> สินค้าภายในโรงแรม</a></li>
+                    <li><a href="product.php" <?php if($page=='product'){echo 'class="text-warning"';}?> ><i class="fa-sharp fa-solid fa-bag-shopping"></i> สินค้าภายในโรงแรม</a></li>
                     <li><a href="contact.php" <?php if($page=='contact'){echo 'class="text-warning"';}?>><i class="fa-sharp fa-solid fa-address-card"></i> เกี่ยวกับเรา</a></li>
                     <?php if($_SESSION['level']=="admin"){ ?><li><a href="man_report.php"><i class="fa-sharp fa-solid fa-chart-line"></i> Dashboard</a></li><?php }?>
                     <div class="right-menu">
